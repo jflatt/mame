@@ -553,9 +553,9 @@ protected:
 	uint8_t hack_duart_r()
 	{
 		if (m_hack_duart_fixed_low)
-		{
+    {
 			return 0x00;
-		}
+    }
 		else
 		{
 			int duart_data = 0;
@@ -569,7 +569,8 @@ protected:
 			}
 			return duart_data;
 		}
-	}
+
+}
 	uint8_t bootleg806_r(address_space &space, offs_t offset);
 
 	required_device<cpu_device> m_maincpu;
